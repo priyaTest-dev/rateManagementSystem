@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "7663412a-e4f0-483e-8e45-33c4f071a8f0",
+		"name": "rate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addRate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rateDescription\": \"This is a VAT surcharge\",\r\n  \"amount\": \"100\",\r\n  \"rateEffectiveDate\":\"2020-11-20\",\r\n  \"rateExpirationDate\":\"2030-11-30\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/rate/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"rate",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rateDescription\": \"This is a VAT surcharge updated\",\r\n  \"amount\": \"100\",\r\n  \"rateEffectiveDate\":\"2020-11-20\",\r\n  \"rateExpirationDate\":\"2030-11-30\",\r\n   \"rateId\": 1\r\n\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/rate/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"rate",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8090/rate/get/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"rate",
+						"get",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRate",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8090/rate/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"rate",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchRate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8090/rate/search/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"rate",
+						"search",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
