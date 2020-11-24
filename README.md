@@ -1,5 +1,5 @@
 # rateManagementSystem
-Assignment For Rate Management System
+Rate Management System
 Technology Stack 
 -- Java 1.8
 -- Spring Boot 2.0
